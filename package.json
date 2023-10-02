@@ -4,6 +4,9 @@
   "description": "React component to compare two images using slider.",
   "main": "dist/bundle.js",
   "types": "dist/ReactCompareImage.d.ts",
+  "publishConfig": {
+    "access": "restricted"
+  },
   "scripts": {
     "build": "del-cli dist/**/* && webpack --config ./webpack.production.config.js && pnpm tsc",
     "prepublishOnly": "pnpm build",
