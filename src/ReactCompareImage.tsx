@@ -170,7 +170,7 @@ const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
       // it's necessary to reset event handlers each time the canvasWidth changes
 
       // for mobile
-      containerElement.addEventListener('touchstart', startSliding); // 01
+      containerElement.addEventListener('touchstart', startSliding, {passive: true}); // 01
       window.addEventListener('touchend', finishSliding); // 02
 
       // for desktop
@@ -201,7 +201,7 @@ const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
 
     return () => {
       // cleanup all event resteners
-      containerElement.removeEventListener('touchstart', startSliding); // 01
+      containerElement.removeEventListener('touchstart', startSliding, { passive: true } ); // 01
       window.removeEventListener('touchend', finishSliding); // 02
       containerElement.removeEventListener('mousemove', handleSliding); // 03
       containerElement.removeEventListener('mouseleave', finishSliding); // 04

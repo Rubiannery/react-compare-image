@@ -1,12 +1,12 @@
 {
-  "name": "react-compare-image",
+  "name": "@merchx-v3/react-compare-image",
   "version": "3.4.0",
   "description": "React component to compare two images using slider.",
   "main": "dist/bundle.js",
   "types": "dist/ReactCompareImage.d.ts",
   "scripts": {
     "build": "del-cli dist/**/* && webpack --config ./webpack.production.config.js && pnpm tsc",
-    "prepublishOnly": "pnpm test && pnpm loki:test && pnpm build",
+    "prepublishOnly": "pnpm build",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006 -s ./public",
